@@ -1,0 +1,140 @@
+.topnav {
+    background-color: #222831;
+    overflow: hidden;
+    margin-bottom: 0px;
+    width: 100%;
+    height: 48px;
+    position: fixed;
+    top: 0px;
+
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 0px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    height: 48px;
+    margin: 0px;
+    display: inline-flex;
+    float: left;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  body {
+    padding: 0px;
+    margin: 0px;
+    padding-top: 48px;
+  }
+
+  .inputText {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.inputTitle {
+    font-size: 18px;
+}
+
+.hidden {
+    display: none;
+}
+
+.mainPosts {
+    padding: 50px;
+    
+}
+
+.mainBody {
+    background-color: #5C5470;
+    margin-top: 0px;
+    height: 100vh;
+    overflow:auto;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: white;
+}
+
+.singlePost, .postDiv {
+    border-radius: 20px;
+    background-color: #EEEEEE;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.existingPost {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 0px;
+    background-color: #5C5470;
+    height: 100vh;
+    overflow:auto;
+}
+
+#dateText {
+    color: white;
+}
+
+.noto-serif, p {
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+.postForm {
+    padding: 22px 40px;
+    background-color: #5C5470;
+    height: 100vh;
+}
+
+.btn {
+    border-radius: 6px;
+    padding: 12px 24px;
+    margin-right: 12px;
+}
+
+.btn-black {
+    background-color: black;
+    color: white;
+}
+
+.btn-black:hover {
+    background-color: #222831;
+}
+
+.btn-gray {
+    background-color: #e7e7e7; 
+    color: black;
+}
+
+.btn-gray:hover {
+    background-color: white;
+}

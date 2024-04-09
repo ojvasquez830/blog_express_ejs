@@ -1,0 +1,9 @@
+<%- include('partials/header.ejs', {pageTitle: "New Post", links: links}) %>
+
+<form action="/create" name="confirmationForm" method="post" class="postForm">
+<input id="titleI" name="titleI" placeholder="Title" class="inputText inputTitle" />
+<textarea id="textI" name="textI" placeholder="Enter your post here..." rows="30" cols="200" class="inputText">
+</textarea>
+<input type="submit" value="Create" class="submitButton btn btn-black">
+</form>
+<%- include('partials/footer.ejs') %>

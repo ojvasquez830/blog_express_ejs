@@ -1,0 +1,23 @@
+<%- include('partials/header.ejs', {pageTitle: "BlogPosts", links: links}) %>
+
+<div class="mainBody"> 
+    <h1> Welcome to BlogPosts </h1>
+    <div class="mainPosts"> 
+    <% for(let i = posts.length - 1; i >= 0 ; i--) { %>
+    
+        <div class="singlePost"> 
+            <a class="noto-serif" href="/post?postId=<%= posts[i].id %>"><h2><%= posts[i].title %></h2> </a>
+            <p> <%= [posts[i].date.getMonth()+1,
+                posts[i].date.getDate(),
+                posts[i].date.getFullYear()].join('/')+' '+
+            [posts[i].date.getHours(),
+            posts[i].date.getMinutes()].join(':')
+                %></p>
+            <hr/>
+            <p><%- (posts[i].text.length > 500) ? posts[i].text.slice(0, 1000) + "[...]" : posts[i].text %></p>
+        </div>
+    
+    <% } %>
+    </div>
+</div>
+<%- include('partials/footer.ejs') %>

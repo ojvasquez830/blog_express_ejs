@@ -1,0 +1,30 @@
+<%- include('partials/header.ejs', {pageTitle: post.title, links: links }) %>
+
+<div class="existingPost">
+<h1 id="titleText"> <%= post.title %> </h1>
+
+<p id="dateText"><%= [post.date.getMonth()+1,
+    post.date.getDate(),
+    post.date.getFullYear()].join('/')+' '+
+   [post.date.getHours(),
+   post.date.getMinutes()].join(':') %></p>
+
+<hr/>
+
+<div class="postDiv">
+<p id="postText"> <%- post.text %></p>
+</div>
+</div>
+
+
+<form class="hidden postForm" action="/edit?postId=<%=post.id%>" name="confirmationForm" id="editForm" method="post">
+    <input id="titleI" name="titleI" placeholder="Title" class="inputText inputTitle" value="<%- post.title %>"/>
+    <textarea id="textI" name="textI" placeholder="Enter your post here..." rows="30" cols="200" class="inputText">
+<%- post.text.replaceAll('<br>', '\r\n') %>
+    </textarea>
+    <input type="submit" value="Save" class="submitButton btn btn-black">
+    <a href="javascript:SwitchToView();" class="btn btn-gray">Exit</a>
+</form>
+
+<script type="text/javascript" src="post.js"> </script>
+<%- include('partials/footer.ejs') %>
